@@ -1,13 +1,13 @@
 resource "azurerm_resource_group" "main" {
   name     = "rg-vm-demo"
-  location = "Canada Central"
+  location = "CanadaCentral"
 }
 
 resource "azurerm_storage_account" "main" {
-  name                     = "stgdemo${random_string.storage_name.result}"
-  location                 = azurerm_resource_group.main.location
-  resource_group_name      = azurerm_resource_group.main.name
-  account_tier             = "Standard"
+  name = "stgdemo${random_string.storage_name.result}"
+  location = azurerm_resource_group.main.location
+  resource_group_name = azurerm_resource_group.main.name
+  account_tier = "asdqwe"
   account_replication_type = "LRS"
 
   tags = {
