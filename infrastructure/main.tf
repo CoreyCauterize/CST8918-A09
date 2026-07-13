@@ -4,10 +4,10 @@ resource "azurerm_resource_group" "main" {
 }
 
 resource "azurerm_storage_account" "main" {
-  name = "stgdemo${random_string.storage_name.result}"
-  location = azurerm_resource_group.main.location
-  resource_group_name = azurerm_resource_group.main.name
-  account_tier = "asdqwe"
+  name                     = "stgdemo${random_string.storage_name.result}"
+  location                 = azurerm_resource_group.main.location
+  resource_group_name      = azurerm_resource_group.main.name
+  account_tier             = "asdqwe"
   account_replication_type = "LRS"
 
   tags = {
@@ -16,9 +16,9 @@ resource "azurerm_storage_account" "main" {
 }
 
 resource "random_string" "storage_name" {
-  length = 8
+  length  = 8
   special = false
-  upper = false
+  upper   = false
 }
 
 output "storage_account_id" {
