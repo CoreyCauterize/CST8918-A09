@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "main" {
-  name     = "rg-vm-demo"
-  location = "Canada Central"
+  name= "rg-vm-demo"
+  location= "Canada Central"
 }
 
 resource "azurerm_storage_account" "main" {
