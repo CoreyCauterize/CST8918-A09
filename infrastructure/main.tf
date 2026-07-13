@@ -16,9 +16,9 @@ resource "azurerm_storage_account" "main" {
 }
 
 resource "random_string" "storage_name" {
-  length  = 8
+  length = 8
   special = false
-  upper   = false
+  upper = false
 }
 
 output "storage_account_id" {
